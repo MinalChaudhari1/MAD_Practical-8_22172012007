@@ -21,10 +21,12 @@ class MainActivity : AppCompatActivity() {
         {
             manager.setExact(AlarmManager.RTC_WAKEUP,militime,pendingintent)
         }
-        else
+        else if(action == AlarmBroadcastReciver.ALRAMSTOP)
         {
             manager.cancel(pendingintent)
             sendBroadcast(intentalrm)
         }
     }
+
+
 }
